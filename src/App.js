@@ -9,7 +9,7 @@ function App() {
   const handlePageChange = (e) => {
     e.preventDefault();
     const email = document.getElementById("workEmail").value;
-    fetch("https://server-wqp7-neyszkp9p-vidur2s-projects.vercel.app/api/add", {
+    fetch("https://server-pearl-eta.vercel.app/api/add", {
       method: "POST",
       body: JSON.stringify({
         email
@@ -17,7 +17,9 @@ function App() {
       headers: {
         "Content-Type": "application/json"
       },
-    }).then((tmp) => console.log(tmp));
+    }).then((tmp) => {
+      window.location.assign("/thank_you");
+    });
   }
 
   useEffect(() => {
