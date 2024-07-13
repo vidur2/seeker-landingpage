@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import logoPlaceholder from "./logoPlaceholder.png"
 import Stack from '@mui/material/Stack';
 import './App.css';
+import appScreens from "./appScreens.png";
 import appPage from "./appPage.png"
 import { useEffect } from 'react';
 
@@ -41,7 +42,7 @@ function App() {
         </form>
       </div>
     </div>
-    <img src={appPage} width="20%" style={{float: "right", marginRight: "7%", marginTop: "-30%"}}></img>
+    <img src={appScreens} style={{float: "right", marginTop: "-25%", width: "55%"}}></img>
   </div>
   );
 }
