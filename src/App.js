@@ -3,13 +3,18 @@ import logoPlaceholder from "./logoPlaceholder.png"
 import Stack from '@mui/material/Stack';
 import './App.css';
 import appPage from "./appPage.png"
+import { useEffect } from 'react';
 
 function App() {
   const handlePageChange = (e) => {
     e.preventDefault();
-    window.sessionStorage.setItem('email', document.getElementById('workEmail').value)
-    window.location.assign('/sign_up')
+    const tmp = process.env.API_KEY;
+    console.log(tmp)
   }
+
+  useEffect(() => {
+    document.title = "Seeker AI"
+  })
 
   return (
     <div>
@@ -27,7 +32,6 @@ function App() {
       </div>
     </div>
     <img src={appPage} width="20%" style={{float: "right", marginRight: "7%", marginTop: "-30%"}}></img>
-
   </div>
   );
 }
