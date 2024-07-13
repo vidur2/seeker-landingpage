@@ -8,8 +8,16 @@ import { useEffect } from 'react';
 function App() {
   const handlePageChange = (e) => {
     e.preventDefault();
-    const tmp = process.env.API_KEY;
-    console.log(tmp)
+    const email = document.getElementById("workEmail").value;
+    fetch("https://server-wqp7-neyszkp9p-vidur2s-projects.vercel.app/api/add", {
+      method: "POST",
+      body: JSON.stringify({
+        email
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      },
+    }).then((tmp) => console.log(tmp));
   }
 
   useEffect(() => {
