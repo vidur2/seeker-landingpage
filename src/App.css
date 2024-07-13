@@ -1,11 +1,19 @@
 .App {
   text-align: center;
+  overflow: auto;
+  background: linear-gradient(transparent, #079957);
+  animation: gradientAnimation 5s ease-in-out 2s infinite;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+.float-child {
+  width: 48%;
+  float: left;
+}  
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
