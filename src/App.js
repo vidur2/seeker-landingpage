@@ -6,6 +6,7 @@ import appScreens from "./appScreens.png";
 import appPage from "./appPage.png"
 import { useEffect, useState } from 'react';
 import { CircularProgress } from '@mui/material';
+import AppMobile from './AppMobile';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,13 @@ function App() {
   useEffect(() => {
     document.title = "Seeker AI"
   })
+
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    // true for mobile device
+    return (
+      <AppMobile />
+    )
+  }
 
   if (loading) {
     return (
